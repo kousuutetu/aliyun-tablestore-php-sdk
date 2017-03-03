@@ -1,26 +1,26 @@
 <?php
-class Error extends PBMessage {
-    var $wired_type = PBMessage::WIRED_LENGTH_DELIMITED;
-    public function __construct($reader = null) {
-        parent::__construct ( $reader );
-        $this->fields['1'] = 'PBString';
-        $this->values['1'] = '';
-        $this->fields['2'] = 'PBString';
-        $this->values['2'] = '';
-    }
-    function code() {
-        return $this->_get_value ( '1' );
-    }
-    function set_code($value) {
-        return $this->_set_value ( '1', $value );
-    }
-    function message() {
-        return $this->_get_value ( '2' );
-    }
-    function set_message($value) {
-        return $this->_set_value ( '2', $value );
-    }
-}
+// class Error extends PBMessage {
+//     var $wired_type = PBMessage::WIRED_LENGTH_DELIMITED;
+//     public function __construct($reader = null) {
+//         parent::__construct ( $reader );
+//         $this->fields['1'] = 'PBString';
+//         $this->values['1'] = '';
+//         $this->fields['2'] = 'PBString';
+//         $this->values['2'] = '';
+//     }
+//     function code() {
+//         return $this->_get_value ( '1' );
+//     }
+//     function set_code($value) {
+//         return $this->_set_value ( '1', $value );
+//     }
+//     function message() {
+//         return $this->_get_value ( '2' );
+//     }
+//     function set_message($value) {
+//         return $this->_set_value ( '2', $value );
+//     }
+// }
 class ColumnType extends PBEnum {
     const INF_MIN = 0;
     const INF_MAX = 1;
